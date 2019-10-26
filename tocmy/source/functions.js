@@ -26,9 +26,9 @@ $(function () {
     	garden.render();
     }, Garden.options.growSpeed);
 
-    if(isMobile.any()){
-    	changePosion();
-    }
+    // if(isMobile.any()){
+    // 	changePosion();
+    // }
 });
 
 $(window).resize(function() {
@@ -139,30 +139,30 @@ function showLoveU() {
 	$('#loveu').fadeIn(3000);
 }
 
-var isMobile = {
-	Android: function () {
-		return navigator.userAgent.match(/Android/i) ? true : false;
-	},
-	BlackBerry: function () {
-		return navigator.userAgent.match(/BlackBerry/i) ? true : false;
-	},
-	iOS: function () {
-		return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
-	},
-	Windows: function () {
-		return navigator.userAgent.match(/IEMobile/i) ? true : false;
-	},
-	any: function () {
-		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
-	}
-};
+// var isMobile = {
+// 	Android: function () {
+// 		return navigator.userAgent.match(/Android/i) ? true : false;
+// 	},
+// 	BlackBerry: function () {
+// 		return navigator.userAgent.match(/BlackBerry/i) ? true : false;
+// 	},
+// 	iOS: function () {
+// 		return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
+// 	},
+// 	Windows: function () {
+// 		return navigator.userAgent.match(/IEMobile/i) ? true : false;
+// 	},
+// 	any: function () {
+// 		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
+// 	}
+// };
 
-function changePosion() {
-	alert("推荐横屏观看");
-	var head = document.getElementsByTagName('head')[0];
-	var link = document.createElement('link');
-	link.href = './source/mobile.css';
-	link.rel = 'stylesheet';
-	link.type = 'text/css';
-	head.appendChild(link);
-}
+// function changePosion() {
+// 	alert("推荐横屏观看");
+// 	var head = document.getElementsByTagName('head')[0];
+// 	var link = document.createElement('link');
+// 	link.href = './source/mobile.css';
+// 	link.rel = 'stylesheet';
+// 	link.type = 'text/css';
+// 	head.appendChild(link);
+// }
