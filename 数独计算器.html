@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	html,body{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	h1{
+		margin-left: 50px;
+	}
+	input{
+		margin: 0;
+		padding: 0;
+		width: 48px;
+		height: 48px;
+		font-size: 40px;
+		text-align: center;
+		border:  1px solid black;
+		float: left;
+	}
+	div{
+		margin: 0;
+		padding: 0;
+		border:  2px solid black;
+		width: 150px;
+		height: 150px;
+		float: left;
+	}
+	button{
+		height: 30px;
+		width: 100px;
+		margin: 10px 25px;
+	}
+	.container{
+		margin: 10px 30px;
+		padding: 0px 20px;
+		width: 462px;
+		height: 600px;
+		border:  1px solid black;
+		left: 100px;
+	}
+	</style>
+</head>
+
+<body>
+
+<div class="container">
+	<h1>数独计算器</h1>
+	<div>
+		<input type="text" id="t11" value=""/>
+		<input type="text" id="t12" value="9"/>
+		<input type="text" id="t13" value="5"/>
+		<input type="text" id="t14" value=""/>
+		<input type="text" id="t15" value=""/>
+		<input type="text" id="t16" value="2"/>
+		<input type="text" id="t17" value=""/>
+		<input type="text" id="t18" value="4"/>
+		<input type="text" id="t19" value=""/>
+	</div>
+	<div>
+		<input type="text" id="t21" value=""/>
+		<input type="text" id="t22" value=""/>
+		<input type="text" id="t23" value="8"/>
+		<input type="text" id="t24" value=""/>
+		<input type="text" id="t25" value=""/>
+		<input type="text" id="t26" value="6"/>
+		<input type="text" id="t27" value=""/>
+		<input type="text" id="t28" value=""/>
+		<input type="text" id="t29" value=""/>
+	</div>
+	<div>
+		<input type="text" id="t31" value=""/>
+		<input type="text" id="t32" value=""/>
+		<input type="text" id="t33" value=""/>
+		<input type="text" id="t34" value="7"/>
+		<input type="text" id="t35" value=""/>
+		<input type="text" id="t36" value=""/>
+		<input type="text" id="t37" value=""/>
+		<input type="text" id="t38" value=""/>
+		<input type="text" id="t39" value="5"/>
+	</div>
+	<div>
+		<input type="text" id="t41" value=""/>
+		<input type="text" id="t42" value="5"/>
+		<input type="text" id="t43" value=""/>
+		<input type="text" id="t44" value=""/>
+		<input type="text" id="t45" value="6"/>
+		<input type="text" id="t46" value=""/>
+		<input type="text" id="t47" value="4"/>
+		<input type="text" id="t48" value=""/>
+		<input type="text" id="t49" value=""/>
+	</div>
+	<div>
+		<input type="text" id="t51" value=""/>
+		<input type="text" id="t52" value="2"/>
+		<input type="text" id="t53" value=""/>
+		<input type="text" id="t54" value=""/>
+		<input type="text" id="t55" value="5"/>
+		<input type="text" id="t56" value=""/>
+		<input type="text" id="t57" value=""/>
+		<input type="text" id="t58" value="7"/>
+		<input type="text" id="t59" value=""/>
+	</div>
+	<div>
+		<input type="text" id="t61" value=""/>
+		<input type="text" id="t62" value=""/>
+		<input type="text" id="t63" value="7"/>
+		<input type="text" id="t64" value=""/>
+		<input type="text" id="t65" value="2"/>
+		<input type="text" id="t66" value=""/>
+		<input type="text" id="t67" value=""/>
+		<input type="text" id="t68" value="8"/>
+		<input type="text" id="t69" value=""/>
+	</div>
+	<div>
+		<input type="text" id="t71" value="2"/>
+		<input type="text" id="t72" value=""/>
+		<input type="text" id="t73" value=""/>
+		<input type="text" id="t74" value=""/>
+		<input type="text" id="t75" value=""/>
+		<input type="text" id="t76" value="6"/>
+		<input type="text" id="t77" value=""/>
+		<input type="text" id="t78" value=""/>
+		<input type="text" id="t79" value=""/>
+	</div>
+	<div>
+		<input type="text" id="t81" value=""/>
+		<input type="text" id="t82" value=""/>
+		<input type="text" id="t83" value=""/>
+		<input type="text" id="t84" value="1"/>
+		<input type="text" id="t85" value=""/>
+		<input type="text" id="t86" value=""/>
+		<input type="text" id="t87" value="3"/>
+		<input type="text" id="t88" value=""/>
+		<input type="text" id="t89" value=""/>
+	</div>
+	<div>
+		<input type="text" id="t91" value=""/>
+		<input type="text" id="t92" value="4"/>
+		<input type="text" id="t93" value=""/>
+		<input type="text" id="t94" value="3"/>
+		<input type="text" id="t95" value=""/>
+		<input type="text" id="t96" value=""/>
+		<input type="text" id="t97" value="2"/>
+		<input type="text" id="t98" value="5"/>
+		<input type="text" id="t99" value=""/>
+	</div>
+	<button onclick="chongzhi()">清空重置</button>
+	<button onclick="bianli1()">遍历一次</button>
+	<button onclick="bianli10()">遍历十次</button>
+</container>
+	
+</body>
+</html>
+<script type="text/javascript">
+
+a = new Array(9);
+
+init();
+console.log(a);
+function init(){
+	for(var i = 0; i < 9;i++){
+		var b = new Array(9);
+		for(var j = 0; j < 9;j++){
+			var t = new Array(1,2,3,4,5,6,7,8,9);
+			b[j] = t;
+			var id = "t"+(i+1)+""+(j+1);
+			document.getElementById(id).style.color="black";
+		}
+		a[i]=b;
+	}
+}
+
+function bianli()
+{
+	for(var i = 0; i < 9;i++){
+		for(var j = 0; j < 9;j++){
+			var id = "t"+(i+1)+""+(j+1);
+			var t = document.getElementById(id).value;
+			if (panduan(t)) {
+				a[i][j] = new Array(t);
+			}else{
+				a[i][j] = a[i][j];
+			}
+		}
+	}
+	console.log(a);
+	for(var i = 0; i < 9;i++){
+		for(var j = 0; j < 9;j++){
+			if(a[i][j].length>1){
+				var t = a[i][j];
+				var t_new = new Array();
+				for(var k = 0; k < t.length; k++){
+					var v = t[k];
+					if(chaxiangtong(i,j,v)){
+						t_new.push(v);
+					}
+				}
+				a[i][j] = t_new;
+				if(a[i][j].length>1){
+					for(var k = 0; k < a[i][j].length; k++){
+						var v = a[i][j][k];
+						if(chazhisheng(i,j,v)){
+							a[i][j]=new Array(v+"");
+							break;
+						}
+					}
+				}
+				if(a[i][j].length==1){
+					var id = "t"+(i+1)+""+(j+1);
+					var element = document.getElementById(id);
+					element.value = a[i][j][0];
+					element.style.color="red";
+				}
+			}
+		}
+	}
+	console.log(a);
+}
+// 查是否本框/本行/本列只有此格可能出现v 若是 则返回true
+function chazhisheng(i,j,v)
+{
+	var flag_k = true;
+	var flag_h = true;
+	var flag_l = true;
+	//本框
+	for(var ii = 0; ii < 9;ii++){
+		for(var jj = 0; jj < 9;jj++){
+			if(!(i == ii && j == jj) && a[ii][jj].length > 1){
+				if(flag_k&&tongkuang(i,ii)&&chuxian(a[ii][jj],v)){
+					flag_k = false;
+				}
+				if(flag_h&&tonghang(i,ii,j,jj)&&chuxian(a[ii][jj],v)){
+					flag_h = false;
+				}
+				if(flag_l&&tonglie(i,ii,j,jj)&&chuxian(a[ii][jj],v)){
+					flag_l = false;
+				}
+			}
+		}
+	}
+	if(flag_k||flag_h||flag_l){
+		return true;
+	}
+	return false;
+}
+function chuxian(aa,v)
+{
+	for(var k = 0; k < aa.length;k++){
+		if(aa[k]==v){
+			return  true;
+		}
+	}
+	return false;
+}
+// 查是否存在相同数字 若不存在相同数字 则返回true
+function chaxiangtong(i,j,v)
+{
+	for(var ii = 0; ii < 9;ii++){
+		for(var jj = 0; jj < 9;jj++){
+			if(a[ii][jj].length==1){
+				if(chaguanlian(i,j,ii,jj)){
+					if(a[ii][jj][0]==v){
+						return false;
+					}
+				}
+			}
+		}
+	}
+	return true;
+}
+// 查是否有关联(同框、同行、同列)  有关联 则返回true
+function chaguanlian(i,j,ii,jj)
+{
+	//同框
+	if (tongkuang(i,ii)) {
+		return true;
+	}
+	//同行
+	if (tonghang(i,ii,j,jj)) {
+		return true;
+	}
+	//同列
+	if (tonglie(i,ii,j,jj)) {
+		return true;
+	}
+	return false;
+}
+function tongkuang(i,ii)
+{
+	if (i==ii) {
+		return true;
+	}
+	return false;
+}
+function tonghang(i,ii,j,jj)
+{
+	if((i==0||i==1||i==2)&&(ii==0||ii==1||ii==2)){
+		if((j==0||j==1||j==2)&&(jj==0||jj==1||jj==2)){
+			return true;
+		}else if((j==3||j==4||j==5)&&(jj==3||jj==4||jj==5)){
+			return true;
+		}else if((j==6||j==7||j==8)&&(jj==6||jj==7||jj==8)){
+			return true;
+		}
+	}else if((i==3||i==4||i==5)&&(ii==3||ii==4||ii==5)){
+		if((j==0||j==1||j==2)&&(jj==0||jj==1||jj==2)){
+			return true;
+		}else if((j==3||j==4||j==5)&&(jj==3||jj==4||jj==5)){
+			return true;
+		}else if((j==6||j==7||j==8)&&(jj==6||jj==7||jj==8)){
+			return true;
+		}
+	}else if((i==6||i==7||i==8)&&(ii==6||ii==7||ii==8)){
+		if((j==0||j==1||j==2)&&(jj==0||jj==1||jj==2)){
+			return true;
+		}else if((j==3||j==4||j==5)&&(jj==3||jj==4||jj==5)){
+			return true;
+		}else if((j==6||j==7||j==8)&&(jj==6||jj==7||jj==8)){
+			return true;
+		}
+	}
+	return false;
+}
+function tonglie(i,ii,j,jj)
+{
+	if((i==0||i==3||i==6)&&(ii==0||ii==3||ii==6)){
+		if((j==0||j==3||j==6)&&(jj==0||jj==3||jj==6)){
+			return true;
+		}else if((j==1||j==4||j==7)&&(jj==1||jj==4||jj==7)){
+			return true;
+		}else if((j==2||j==5||j==8)&&(jj==2||jj==5||jj==8)){
+			return true;
+		}
+	}else if((i==1||i==4||i==7)&&(ii==1||ii==4||ii==7)){
+		if((j==0||j==3||j==6)&&(jj==0||jj==3||jj==6)){
+			return true;
+		}else if((j==1||j==4||j==7)&&(jj==1||jj==4||jj==7)){
+			return true;
+		}else if((j==2||j==5||j==8)&&(jj==2||jj==5||jj==8)){
+			return true;
+		}
+	}else if((i==2||i==5||i==8)&&(ii==2||ii==5||ii==8)){
+		if((j==0||j==3||j==6)&&(jj==0||jj==3||jj==6)){
+			return true;
+		}else if((j==1||j==4||j==7)&&(jj==1||jj==4||jj==7)){
+			return true;
+		}else if((j==2||j==5||j==8)&&(jj==2||jj==5||jj==8)){
+			return true;
+		}
+	}
+	return false;
+}
+// 判断是否为1-9的整数  如果是 则返回true
+function panduan(t)
+{
+	if(t==1||t==2||t==3||t==4||t==5||t==6||t==7||t==8||t==9){
+		return true;
+	}
+	return false;
+}
+function chongzhi()
+{
+	init();
+	for(var i = 0; i < 9;i++){
+		for(var j = 0; j < 9;j++){
+			var id = "t"+(i+1)+""+(j+1);
+			document.getElementById(id).value = "";
+		}
+	}
+}
+function bianli1()
+{
+	bianli();
+}
+function bianli10()
+{
+	for(var i = 0; i < 10; i++){
+		bianli();
+	}
+}
+
+</script>
