@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=640,target-densitydpi=320,user-scalable=no">
+	<title>toyota</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/swiper-3.4.0.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<script type="text/javascript" src="js/swiper-3.4.0.min.js"></script>
+</head>
+
+
+<body>
+	<!--背景音乐-->
+	<audio src="music/bg.mp3" loop="" autoplay="" id="bgmusic"></audio> 
+	<!--旁白声音-->
+	<audio src="music/say/t1.mp3" id="say"></audio>
+	<audio src="music/say/t6.mp3" id="say61"></audio>
+	<audio src="music/say/t7.mp3" id="say62"></audio>
+	<!--效果声音-->
+	<audio src="music/knock.wav" id="sounds"></audio>
+	
+	<audio src="music/knock.wav" id="soundknock"></audio>
+	
+	<div id="container" class="swiper-container">
+		<!--加载页-->
+		<div id="loadingtab">
+			<img src="images/logo.png" alt="" class="beCenter">
+			<p  class="beCenter">
+				Loading...
+				<span id="loadingtext">0%</span>
+			</p>
+		</div>
+		
+		<!--背景音乐控制图标-->
+		<img src="images/music-play.png" alt="" id="bgmusicbtn">
+
+		<div id="slides-container" class="swiper-wrapper">
+<!--1-->
+			<div class="swiper-slide slide" id="slideP1">
+				<!--左上角LOGO，每一页都有-->
+				<img src="images/logo.png" alt="" class="logo ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0s">
+
+				<!--页脚提示箭头，最后一页无-->
+				<div id="switchpoint1" class="switchpoint">
+					<img src="images/each-page-btn.png" alt="" class="beCenter beMiddle ani" swiper-animate-effect="upDown" swiper-animate-duration="1.5s" swiper-animate-delay="3s" id="switchpoint-pg1">
+				</div>
+				
+				<!--提示点击的闪烁圆点-->
+				<div id="clickTip1" class="beCenter clickTip clickTip1">
+					<div id="clickTipOuter" class="ani clickTipOuter" swiper-animate-effect="blink1" swiper-animate-duration="1s"></div>
+					<div id="clickTipInner" class="clickTipInner"></div>
+				</div>
+				
+				<!--切换的两张大图-->
+				<img src="images/p1-bg.jpg" alt="" class="bigImg" id="pg1-bg1">
+				<img src="images/p1-2-bg.jpg" alt="" class="bigImg" id="pg1-bg2">
+				<!--大图切换后的文字-->
+				<img src="images/p1-txt5.png" alt="" id="pg1-txt" class="beCenter">
+			</div>
+
+
+<!--2-->
+			<div class="swiper-slide slide">
+				<img src="images/logo.png" alt="" class="logo ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0s">
+
+				<div id="switchpoint" class="switchpoint">
+					<img src="images/each-page-btn.png" alt="" class="beCenter beMiddle ani" swiper-animate-effect="upDown" swiper-animate-duration="2s" swiper-animate-delay="2s">
+				</div>
+
+				<img src="images/p3-bg.jpg" alt="" class="bigImg">
+
+				<img src="images/p3-light.png" alt="" class="ani p3-light" swiper-animate-effect="blink2" swiper-animate-duration="0.5s">
+
+				<img src="images/p3-txt.png" alt="" class="ani beCenter txt2" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="2s">
+
+				<!--三张烟雾图片-->
+				<img src="images/p3-smoke1.png" alt="" class="ani beCenter smoke21" swiper-animate-effect="fadeIn" swiper-animate-duration="3s" swiper-animate-delay="0s">
+				<img src="images/p3-smoke2.png" alt="" class="ani beCenter smoke22" swiper-animate-effect="fadeIn" swiper-animate-duration="3s" swiper-animate-delay="1s">
+				<img src="images/p3-smoke3.png" alt="" class="ani beCenter smoke23" swiper-animate-effect="fadeIn" swiper-animate-duration="3s" swiper-animate-delay="1.5s">
+			</div>
+
+
+<!--3-->
+			<div class="swiper-slide slide">
+				<img src="images/logo.png" alt="" class="logo ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0s">
+
+				<div id="switchpoint" class="switchpoint">
+					<img src="images/each-page-btn.png" alt="" class="beCenter beMiddle ani" swiper-animate-effect="upDown" swiper-animate-duration="2s" swiper-animate-delay="2s">
+				</div>
+
+				<img src="images/p4-bg.jpg" alt="" class="bigImg">
+				
+				<img src="images/p4-txt.png" alt="" class="ani beCenter txt3" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="2s">
+
+				<!--三张烟雾图片-->
+				<img src="images/p4-smoke1.png" alt="" class="ani beCenter smoke21" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+				<img src="images/p4-smoke2.png" alt="" class="ani beCenter smoke22" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="0.6s">
+				<img src="images/p4-smoke3.png" alt="" class="ani beCenter smoke23" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.8s">
+
+			</div>
+
+
+<!--4-->
+			<div class="swiper-slide slide">
+				<img src="images/logo.png" alt="" class="logo ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0s">
+
+				<div id="switchpoint" class="switchpoint">
+					<img src="images/each-page-btn.png" alt="" class="beCenter beMiddle ani" swiper-animate-effect="upDown" swiper-animate-duration="2s" swiper-animate-delay="2s">
+				</div>
+				
+				<img src="images/p4-bg2.jpg" alt="" class="bigImg">
+				<img src="images/p4-txt2.png" alt="" class="ani beCenter txt4" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="2s">
+				
+			</div>
+
+<!--5-->
+			<div class="swiper-slide slide">
+				<img src="images/logo.png" alt="" class="logo ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0s">
+
+				<div id="switchpoint" class="switchpoint">
+					<img src="images/each-page-btn.png" alt="" class="beCenter beMiddle ani" swiper-animate-effect="upDown" swiper-animate-duration="2s" swiper-animate-delay="2s">
+				</div>
+				
+				<img src="images/p2-bg.jpg" alt="" class="bigImg">
+				
+				<img src="images/p2-txt.png" alt="" class="ani beCenter txt5" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="3s">
+				
+				<!--三张烟雾图片-->
+				<img src="images/p2-smoke1.png" alt="" class="ani smoke51" swiper-animate-effect="smokeUp" swiper-animate-duration="5s" swiper-animate-delay="0s">
+				<img src="images/p2-smoke2.png" alt="" class="ani smoke52" swiper-animate-effect="smokeUp" swiper-animate-duration="5s" swiper-animate-delay="0.5s">
+				<img src="images/p2-smoke3.png" alt="" class="ani smoke53" swiper-animate-effect="smokeUp" swiper-animate-duration="5s" swiper-animate-delay="1s">
+
+				<img src="images/p2-roll.png" alt="" class="ballP5">
+				
+			</div>
+<!--6-->
+			<div class="swiper-slide slide" id="slide6">
+				<img src="images/logo.png" alt="" class="logo ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0s">
+
+				<div id="switchpoint" class="switchpoint">
+					<img src="images/each-page-btn.png" alt="" class="beCenter beMiddle ani" swiper-animate-effect="upDown" swiper-animate-duration="2s" swiper-animate-delay="2s">
+				</div>
+				
+				<img src="images/p5-img1.png" alt="" class="imgP61 ani" id="imgP61" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0s">
+				<img src="images/p5-img2.png" alt="" class="imgP62 ani" id="imgP62" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.6s" swiper-animate-delay="0.4s">
+				<img src="images/p5-mask.png" alt="" class="maskP6 ani" id="maskP6" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="4s">
+				<img src="images/p5-txt1.png" alt="" class="txtP61 beCenter" id="txtP61">
+				<img src="images/p5-txt2.png" alt="" class="txtP62 beCenter" id="txtP62">
+
+				<!--提示点击的闪烁圆点-->
+				<div id="clickTip6" class="beCenter clickTip clickTip6">
+					<div id="clickTipOuter6" class="ani clickTipOuter" swiper-animate-effect="blink1" swiper-animate-duration="1s"></div>
+					<div id="clickTipInner6" class="clickTipInner"></div>
+				</div>
+				<!--点击后出现的碎玻璃-->
+				<img src="images/p5-glass.png" alt="" class="glassP6" id="glassP6">
+			</div>
+<!--7-->
+			<div class="swiper-slide slide">
+				<img src="images/logo.png" alt="" class="logo ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0s">
+
+				<div id="switchpoint" class="switchpoint">
+					<img src="images/each-page-btn.png" alt="" class="beCenter beMiddle ani" swiper-animate-effect="upDown" swiper-animate-duration="2s" swiper-animate-delay="2s">
+				</div>
+				
+				<img src="images/p6-bg.jpg" alt="" class="bigImg">
+				<img src="images/p6-cloud1.png" alt="" class="cloudP71 ani" swiper-animate-effect="outLeft" swiper-animate-duration="3s" swiper-animate-delay="0s">
+				<img src="images/p6-cloud2.png" alt="" class="cloudP72 ani" swiper-animate-effect="outRight" swiper-animate-duration="3s" swiper-animate-delay="0s">
+				<img src="images/p6-cloud1.png" alt="" class="cloudP73 ani" swiper-animate-effect="outLeft" swiper-animate-duration="4s" swiper-animate-delay="0s">
+				<img src="images/p6-txt.png" alt="" class="beCenter txtP7 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="3s" swiper-animate-delay="3s">
+				
+			</div>
+<!--8-->
+			<div class="swiper-slide slide">
+				<img src="images/logo.png" alt="" class="logo ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0s">
+
+				<div id="switchpoint" class="switchpoint">
+					<img src="images/each-page-btn.png" alt="" class="beCenter beMiddle ani" swiper-animate-effect="upDown" swiper-animate-duration="2s" swiper-animate-delay="2s">
+				</div>
+				
+				<img src="images/p7-bg.jpg" alt="" class="bigImg">
+
+				<img src="images/p7-shining1.png" alt="" class="shining81 ani" swiper-animate-effect="upDown2" swiper-animate-duration="1.2s" swiper-animate-delay="-1.2s">
+				<img src="images/p7-shining2.png" alt="" class="shining82 beCenter ani" swiper-animate-effect="upDown2" swiper-animate-duration="2s" swiper-animate-delay="0s">
+				<img src="images/p7-shining3.png" alt="" class="shining83 ani" swiper-animate-effect="upDown2" swiper-animate-duration="1.2s" swiper-animate-delay="-1.2s">
+
+				<img src="images/p7-txt.png" alt="" class="beCenter txtP8 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1.2s" swiper-animate-delay="1s">
+
+				
+			</div>
+<!--9-->
+			<div class="swiper-slide slide">
+				<img src="images/logo.png" alt="" class="logo ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0s">
+
+				<div id="switchpoint" class="switchpoint">
+					<img src="images/each-page-btn.png" alt="" class="beCenter beMiddle ani" swiper-animate-effect="upDown" swiper-animate-duration="2s" swiper-animate-delay="2s">
+				</div>
+				
+				<img src="images/p8-bg.jpg" alt="" class="bigImg">
+				
+				<img src="images/p8-shining.png" alt="" class="ani shiningP9" swiper-animate-effect="blink2" swiper-animate-duration="1.5s" swiper-animate-delay="0s">
+				<img src="images/p8-rotate.png" alt="" class="ani beCenter rotateP9" swiper-animate-effect="roundRotate" swiper-animate-duration="3s" swiper-animate-delay="0s">
+				<img src="images/p8-txt.png" alt="" class="ani beCenter txtP9" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="2s">
+				
+			</div>
+<!--10-->
+			<div class="swiper-slide slide">
+				<img src="images/logo.png" alt="" class="logo ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0s">
+
+				<div id="switchpoint" class="switchpoint">
+					<img src="images/each-page-btn.png" alt="" class="beCenter beMiddle ani" swiper-animate-effect="upDown" swiper-animate-duration="2s" swiper-animate-delay="2s">
+				</div>
+				
+				<img src="images/p8-1-bg.jpg" alt="" class="bigImg">
+				<img src="images/p8-1-left1.png" alt="" class="ani leftP101"  swiper-animate-effect="outLeft2" swiper-animate-duration="4s" swiper-animate-delay="0s">
+				<img src="images/p8-1-left2.png" alt="" class="ani leftP102"  swiper-animate-effect="outLeft2" swiper-animate-duration="4s" swiper-animate-delay="0s">
+				<img src="images/p8-1-right2.png" alt="" class="ani rightP102"  swiper-animate-effect="outRight2" swiper-animate-duration="4s" swiper-animate-delay="0s">
+				<img src="images/p8-1-right1.png" alt="" class="ani rightP101"  swiper-animate-effect="outRight2" swiper-animate-duration="4s" swiper-animate-delay="0s">
+				
+				<img src="images/p8-1-txt.png" alt="" class="ani beCenter txtP10" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="4s">
+				
+			</div>
+<!--11-->
+			<div class="swiper-slide slide">
+				<img src="images/logo.png" alt="" class="logo ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0s">
+
+				<div id="switchpoint6" class="switchpoint">
+					<img src="images/each-page-btn.png" alt="" class="beCenter beMiddle ani" swiper-animate-effect="upDown" swiper-animate-duration="2s" swiper-animate-delay="2s">
+				</div>
+
+				
+				<img src="images/p9-bg.jpg" alt="" class="bigImg">
+
+				<img src="images/p9-mask.png" alt="" class="bigImg ani" swiper-animate-effect="blink2" swiper-animate-duration="1.5s" swiper-animate-delay="3s">
+
+				<img src="images/p9-title1.png" alt="" class="ani titleP111 beCenter" swiper-animate-effect="bounceInLB" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+				<img src="images/p9-title2.png" alt="" class="ani titleP112" swiper-animate-effect="bounceInLB" swiper-animate-duration="0.5s" swiper-animate-delay="1s">
+				<img src="images/p9-txt.png" alt="" class="ani beCenter txtP11" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="1.5s">
+				
+				
+				
+			</div>
+<!--12-->
+			<div class="swiper-slide slide">
+				<!--最后一页，没有提示箭头-->
+				<img src="images/logo.png" alt="" class="logo ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.6s" swiper-animate-delay="0s">
+
+				<img src="images/p10-bg.jpg" alt="" class="bigImg">
+				<img src="images/p9-title1.png" alt="" class="ani titleP111 beCenter" swiper-animate-effect="bounceInLB" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+				<img src="images/p9-title2.png" alt="" class="ani titleP112" swiper-animate-effect="bounceInLB" swiper-animate-duration="0.5s" swiper-animate-delay="1s">
+				
+				<img src="images/p10-txt.png" alt="" class="ani beCenter txtP12" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="1.5s">
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="js/swiper.animate1.0.2.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

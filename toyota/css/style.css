@@ -1,0 +1,486 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	text-align: center;
+	font: normal 500 32px "黑体";
+}
+.swiper-container,
+#loadingtab{
+	position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+/*水平和垂直居中类*/
+.beCenter{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.beMiddle{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+/*所有页面底部切换提示箭头*/
+.switchpoint{
+	width: 100%;
+	height: 9%;
+	position: absolute;
+	bottom: 0;
+	z-index: 999;
+}
+.switchpoint img{
+	height: 50%;
+}
+
+/*所有页面右上角的背景音乐按钮*/
+#bgmusicbtn{
+	width: 7%;
+	position:fixed;
+	right: 16px;
+	top: 16px; 
+	z-index: 999;
+}
+/*所有页面都是相对定位*/
+.slide{
+	position: relative;
+	overflow: hidden;
+}
+.slide img{
+	position: absolute;
+}
+/*所有页面的logo*/
+.logo{
+	width: 15%;
+	left: 6%;
+	top: 24px;
+	z-index: 999;
+}
+/*加载页面几个元素*/
+#loadingtab{
+	z-index: 9999;
+}
+#loadingtab img{
+	width: 40%;
+	bottom: 55%;
+}
+#loadingtab p{
+	bottom: 50%;
+}
+/*所有全屏照片样式*/
+.bigImg{
+	width: 100%;
+	/* height: 90%; */
+	left: 0;
+	top: 0;
+}
+/*第一页图片独有样式*/
+#pg1-bg1{
+	opacity: 1;
+	transition: opacity 0.6s linear;
+}
+#pg1-bg2{
+	opacity: 0;
+	transition: opacity 0.6s linear;
+}
+#pg1-txt{
+	opacity: 0;
+	width: 80%;
+	top: 12%;
+	transition: opacity 1s linear;
+}
+/*闪烁白色原点*/
+.clickTip,
+.clickTipOuter,
+.clickTipInner{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	
+}
+.clickTip1{
+	top: 660px;
+}
+
+.clickTip .clickTipOuter,
+.clickTip .clickTipInner{
+	background: #fff;
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	opacity: 0.3;
+}
+
+/*第二页图片独有样式*/
+.p3-light{
+	left: 0;
+	top: 565px;
+}
+.txt2,.txt3,.txt5{
+	width: 55%;
+	top: 25%;
+}
+.smoke21,.smoke22{
+	top: 0;
+}
+.smoke23{
+	width: 100%;
+	bottom: 0;
+}
+.txt4{
+	width: 80%;
+	top: 750px;
+}
+/*第5页*/
+.smoke51{
+	top: 105px;
+	left: 0px;
+}
+.smoke52{
+	top: 0px;
+	left: 0px;
+}
+.smoke53{
+	top: 105px;
+	left: 330px;
+}
+.ballP5{
+	left: 65px;
+	top: 450px;
+}
+/*第六页*/
+.glassP6,.imgP61,.maskP6{
+	left: 0;
+	top: 0;
+}
+.imgP62{
+	left: 0;
+	top: 401px;
+}
+.clickTip6{
+	top: 390px;
+}
+.txtP61{
+	width: 66%;
+	top: 250px;
+}
+.txtP62{
+	width: 66%;
+	top: 535px;
+}
+.maskP6,.txtP61,.txtP62{
+	opacity: 0;
+	transition: opacity 2s linear;
+}
+.glassP6{
+	display: none;
+}
+/*第七页*/
+.cloudP73{
+	left: -150px;
+	top: 100px;
+}
+.cloudP71{
+	left: 0;
+	top: 285px;
+}
+.cloudP72{
+	right: 0;
+	top: 480px;
+}
+.txtP7{
+	width: 72%;
+	top: 295px;
+}
+/*第8页*/
+.txtP8{
+	width: 80%;
+	top: 150px;
+}
+.shining81{
+	top: 290px;
+	left: 100px;
+}
+.shining82{
+	top: 220px;
+}
+.shining83{
+	top: 270px;
+	left: 400px;
+}
+/*第9页*/
+.shiningP9{
+	width: 430px;
+	left: 128px;
+	top: 260px;
+}
+.rotateP9{
+	width: 110px;
+	top: 317px;
+}
+.txtP9{
+	width: 85%;
+	top: 730px;
+}
+/*第10页*/
+.leftP101{
+	left: 260px;
+	top: 450px;
+}
+.leftP102{
+	left: 320px;
+	top: 350px;
+}
+.rightP101{
+	left: 320px;
+	top: 453px;
+}
+.rightP102{
+	left: 338px;
+	top: 450px;
+}
+.txtP10{
+	width: 450px;
+	top: 250px;
+}
+/*第11页*/
+.titleP111{
+	left: 11px;
+	top: 185px;
+	transform-origin: 0 100%;
+}
+.titleP112{
+	left: 275px;
+	top: 160px;
+	transform-origin: 0 100%;
+}
+.txtP11{
+	width: 66%;
+	top: 675px;
+}
+/*第12页*/
+.txtP12{
+	width: 320px;
+	top: 860px;
+}
+
+
+
+/*自定义动画*/
+/*上明下暗动*/
+@keyframes updown{
+	0%{
+		transform: translateY(10%);
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(-40%);
+		opacity: 1;
+	}
+}
+.upDown{
+	animation-name:updown;
+	animation-iteration-count: infinite; 
+	animation-timing-function: ease-out;
+}
+/*由明到暗闪*/
+@keyframes blink1{
+	0%{
+		transform: scale(1,1);
+		opacity: 1;
+	}
+	100%{
+		transform: scale(2,2);
+		opacity: 0;
+	}
+}
+.blink1{
+	animation-name:blink1;
+	animation-iteration-count: infinite; 
+	animation-timing-function: ease-out;
+}
+/*明暗交替变化闪*/
+@keyframes blink2{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.blink2{
+	animation-name:blink2;
+	animation-iteration-count: infinite; 
+	animation-timing-function: linear;
+	animation-direction: alternate;
+}
+/*烟上升*/
+@keyframes smokeup{
+	0%{
+		transform: translateY(10%);
+		opacity: 0;
+	}
+	70%{
+		transform: translateY(-3%);
+		opacity: 1;
+	}
+	100%{
+		transform: translateY(-10%);
+		opacity: 0;
+	}
+}
+.smokeUp{
+	animation-name:smokeup;
+	animation-iteration-count: infinite; 
+	animation-timing-function: linear;
+}
+/*左边出*/
+@keyframes outLeft{
+	0%{
+		opacity: 0;
+		transform: translateX(0)
+	}
+	20%{
+		opacity: 1;
+		transform: translateX(0)
+	}
+	30%{
+		opacity: 1;
+		transform: translateX(0)
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(-100%);
+	}
+}
+.outLeft{
+	animation-name:outLeft;
+	animation-timing-function: linear;
+}
+/*右边出*/
+@keyframes outRight{
+	0%{
+		opacity: 0;
+		transform: translateX(0)
+	}
+	20%{
+		opacity: 1;
+		transform: translateX(0)
+	}
+	30%{
+		opacity: 1;
+		transform: translateX(0)
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(100%);
+	}
+}
+.outRight{
+	animation-name:outRight;
+	animation-timing-function: linear;
+}
+/*上暗下明动*/
+@keyframes updown2{
+	0%{
+		transform: translateY(8%);
+		opacity: 1;
+	}
+	100%{
+		transform: translateY(-8%);
+		opacity: 0.2;
+	}
+}
+.upDown2{
+	animation-name:updown2;
+	animation-iteration-count: infinite; 
+	animation-timing-function: linear;
+	animation-direction: alternate;
+}
+/*不停转*/
+@keyframes roundrotate{
+	100%{
+		transform: rotate(360deg);
+	}
+}
+.roundRotate{
+	animation-name:roundrotate;
+	animation-iteration-count: infinite; 
+	animation-timing-function: linear;
+}
+
+/*另一种左边出*/
+@keyframes outLeft2{
+	0%{
+		opacity: 0;
+		transform: translateX(0)
+	}
+	20%{
+		opacity: 1;
+		transform: translateX(0)
+	}
+	30%{
+		opacity: 1;
+		transform: translateX(0)
+	}
+	100%{
+		opacity: 0;
+		transform: translateX(-300px);
+	}
+}
+.outLeft2{
+	animation-name:outLeft2;
+	animation-timing-function: linear;
+}
+/*另一种右边出*/
+@keyframes outRight2{
+	0%{
+		opacity: 0;
+		transform: translateX(0)
+	}
+	20%{
+		opacity: 1;
+		transform: translateX(0)
+	}
+	30%{
+		opacity: 1;
+		transform: translateX(0)
+	}
+	100%{
+		opacity: 0;
+		transform: translateX(300px);
+	}
+}
+.outRight2{
+	animation-name:outRight2;
+	animation-timing-function: linear;
+}
+
+/*左下角弹出*/
+@keyframes bounceInLB{
+	0%{
+		transform: scale(0);
+	}	
+	60%{
+		transform: scale(1.1);
+	}
+	85%{
+		transform: scale(0.85);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+.bounceInLB{
+	animation-name:bounceInLB;
+	animation-timing-function: linear;
+}

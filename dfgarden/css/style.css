@@ -1,0 +1,263 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body,#container,.toshowSlide,.fullscreen{
+	width: 100%;
+	height: 100%;
+}
+/*总容器背景*/
+#container{
+	position: relative;
+	overflow: hidden;
+	background: url(../images/bg.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+/*所有图片都是绝对定位*/
+img{
+	position: absolute;
+}
+/*每个单独展示的页面*/
+.toshowSlide{
+	position: relative;
+}
+.cansee{
+	display: block;
+}
+.hided{
+	display: none;
+}
+/*水平居中类*/
+.beCenter{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+/*垂直居中类*/
+.beMiddle{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+/*第一页*/
+.bg1-1{
+	width: 593px;
+	height: 834px;
+	background: url("../images/bg0.png") 0 0 no-repeat;
+	top: 40px;
+}
+.logo1{
+	left: 24px;
+	top: 20px;
+}
+.logo{
+	width: 136px;
+	height: 113px;
+	left: 32px;
+	top: 32px;
+}
+.title1-1{
+	top: 30px;
+	animation: updown 0.6s linear alternate infinite;
+}
+.title1-2{
+	left: 390px;
+	top: 615px;
+	transform-origin: 0 50%;
+	animation: rock 0.3s linear alternate infinite;
+}
+.btn1{
+	top: 890px;
+	animation: smallbig 0.6s linear alternate infinite;
+}
+/*第二页*/
+.bg2,.bg3{
+	top: 92px;
+}
+.title2-1{
+	left: 220px;
+	top: 370px;
+	animation: updown 0.3s linear alternate infinite;
+}
+.title2-2{
+	top: 615px;
+}
+.btn2{
+	top: 900px;
+}
+.rules{
+	display: none;
+	z-index: 999;
+}
+
+/*第三页*/
+.title3-1{
+	left: 475px;
+	top: 75px;
+	animation: rock 0.3s linear alternate infinite;
+}
+.title3-2{
+	left: 175px;
+	top: 802px;
+	transform-origin: 0 50%;
+	animation: rock 0.3s linear alternate infinite;
+}
+#btn31{
+	top: 900px;
+	left: 40px;
+}
+#btn32{
+	top: 900px;
+	left: 350px;
+}
+.blackbg3{
+	width: 515px;
+	height: 610px;
+	position: absolute;
+	left: 67px;
+	top: 185px;
+	border-radius: 60px;
+	overflow: hidden;
+	background: #222;
+}
+/*第四页*/
+.fuckTip{
+	top: 70px;
+}
+.fuckAgainTip{
+	top: 300px;
+}
+.fuckOn,.fucked{
+	top: 836px;
+}
+#mask42{
+	display: none;
+	z-index: 9999;
+}
+#clampSystmInner,#clamp,.clampHand{
+	position: static;
+	display: block;
+	width: 100px;
+}
+.clampHand{
+	margin-bottom: -10px;
+}
+#clampSystmInner{
+	width: 100px;
+	position: absolute;
+	top: -330px;
+}
+#gameFruit0{
+	width: 145px;
+	top: 485px;
+	left: 150px;
+}
+#gameFruit1{
+	width: 160px;
+	top: 535px;
+	left: 270px;
+}
+#gameFruit2{
+	width: 160px;
+	top: 455px;
+	left: 395px;
+}
+#gameFruit3{
+	width: 160px;
+	top: 600px;
+	left: 60px;
+}
+#clampsystm{
+	width: 450px;
+	height: 600px;
+	top: 215px;
+	overflow: hidden;
+}
+.clampDecoration{
+	width: 36px;
+	height: 36px;
+	border: 2px solid #f00;
+	background: #000;
+	border-radius: 50%;
+	bottom: 55px;
+}
+/*第五页*/
+.rocks{
+	width: 559px;
+	height: 662px;
+	top: 150px;
+}
+#liquid{
+	top: 173px;
+	left: 84px;
+}
+#fruit{
+	top: 290px;
+	left: 100px;
+}
+.movingFruit{
+	animation: leftright 0.8s linear alternate infinite; 
+}
+.loadingGuys{
+	width: 450px;
+	height: 38px;
+	text-align: center;
+	font-size: 40px;
+	top: 810px;
+}
+.loadingbg{
+	width: 374px;
+	height: 38px;
+	background: url("../images/loadingBg.png") 0 0 no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	overflow: hidden;
+}
+#loadingProgress2{
+	left: 0;
+	transform: translateX(-100%);
+}
+.loadingTip{
+	top: 870px;
+}
+#loadingText{
+	display: inline-block;
+	vertical-align: middle;
+}
+/*各种动画*/
+@keyframes updown{
+	0%{
+		transform: translateY(8px);
+	}
+	100%{
+		transform: translateY(-8px);
+	}
+}
+@keyframes smallbig{
+	0%{
+		transform: scale(0.9);
+	}
+	100%{
+		transform: scale(1.0);
+	}
+}
+@keyframes rock{
+	0%{
+		transform: rotate(5deg);
+	}
+	100%{
+		transform: rotate(-5deg);
+	}
+}
+@keyframes leftright{
+	0%{
+		transform: translateX(0px);
+	}
+	100%{
+		transform: translateX(10px);
+	}
+}
