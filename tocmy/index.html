@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>...</title>
+
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			/*src: url('digital-7_mono.ttf') format("truetype");*/
+		}
+	</style>
+
+	<link href="./source/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="./source/jquery.js"></script>
+	<script type="text/javascript" src="./source/garden.js"></script>
+	<script type="text/javascript" src="./source/functions.js"></script>
+
+</head>
+
+<body>
+
+	<div id="mainDiv">
+		<div id="content" style="width: 1110px; height: 625px; margin-top: 10px; margin-left: 119.5px;">
+			<div id="code" style="margin-top: 112.5px;">
+				<span class="comments">/**</span><br>
+				<span class="space"><span class="comments">*1995—07-10,</span><br>
+				<span class="space"><span class="comments">*2000-07-21.</span><br>
+				<span class="space"><span class="comments">*/</span><br>
+				Boy name = <span class="keyword">Mr</span> YANG<br>
+				Girl name = <span class="keyword">Mrs</span> CHEN<br>
+				<span class="comments">// Fall in love river. </span><br>
+				The boy love the girl;<br>
+				<span class="comments">// They love each other.</span><br>
+				The girl loved the boy;<br>
+				<span class="comments">// AS time goes on.</span><br>
+				The boy can not be separated the girl;<br>
+				<span class="comments">// At the same time.</span><br>
+				The girl can not be separated the boy;<br>
+				<span class="comments">// No matter how big the wind and rain.</span><br>
+				<span class="comments">// They will always go on.</span><br>
+				<span class="keyword">The boy</span> very <span class="keyword">happy</span>;<br>
+				<span class="keyword">The girl</span> is also very <span class="keyword">happy</span>;<br>
+			_</span></span></span></div>
+			<div id="loveHeart">
+				<canvas id="garden" width="670" height="625"></canvas>
+				<div id="words" style="position: absolute; top: 205px; left: 629.5px;">
+					<div id="messages" style="display: block;">
+						亲爱的陈梦雨，这是我们相爱在一起的时光。
+						<div id="elapseClock"><span class="digit">0</span> days <span class="digit">0</span> hours <span class="digit">0</span> minutes <span class="digit">0</span> seconds</div>
+					</div>
+					<div id="loveu" style="display: block;">
+						爱你直到永永远远。<br>
+						<div class="signature">- 爱你的阳昊</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2017, 9, 10);
+		together.setHours(22);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "你的浏览器不支持 HTML5!<br/>请更换浏览器查看"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+			document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 2000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+
+
+</body></html>
