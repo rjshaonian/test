@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body,html{
+			width: 100%;
+		}
+		.container{
+			width: 200px;
+			margin: 200px auto;
+		}
+		input{
+			width: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" id="container">
+		<input type="text" id="t0">
+		<input type="text" id="t1">
+		<input type="text" id="t2">
+		<input type="text" id="t3">
+		<button id="btn">start</button>
+	</div>
+	<script>
+
+		var t=new Array();
+		var a=new Array();
+		var l=4;
+		var container=document.getElementById("container");
+		
+		var btn=document.getElementById("btn");
+		btn.onclick=function(){
+			t[0]=parseInt(document.getElementById("t0").value);
+			t[1]=parseInt(document.getElementById("t1").value);
+			t[2]=parseInt(document.getElementById("t2").value);
+			t[3]=parseInt(document.getElementById("t3").value);
+
+			// var child=document.getElementsByTagName("p");
+			// if(child!=null){
+			// 	container.removeChild(child);
+			// }
+
+			fenzujisuan(t);
+			
+		}
+
+		function fenzujisuan(t){
+			for(var i=0;i<l;i++){
+				a[0]=t[i];
+				for(var j=0;j<l;j++){
+					if(j==i){
+						continue;
+					}
+					a[1]=t[j];
+					for(var m=0;m<l;m++){
+						if(m==j||m==i){
+							continue;
+						}
+						a[2]=t[m];
+						for(var n=0;n<l;n++){
+							if(n==m||n==j||n==i){
+								continue;
+							}
+							a[3]=t[n];
+							jisuan(a);
+						}
+					}
+				}
+			}
+		}
+
+		function jisuan(a){
+			for(var ii=0;ii<4;ii++){
+				for(var jj=0;jj<4;jj++){
+					for(var kk=0;kk<4;kk++){
+						var temp=a[0];
+						temp=sizeyunsuan(temp,a[1],ii);
+						temp=sizeyunsuan(temp,a[2],jj);
+						temp=sizeyunsuan(temp,a[3],kk);
+						if(temp==24){
+							var show = a[0]+showf(ii)+a[1]+showf(jj)+a[2]+showf(kk)+a[3];
+							console.log(show);
+							var newNode = document.createElement("p"); 
+							newNode.innerHTML = show; 
+							container.appendChild(newNode);
+						}
+					}
+				}
+			}
+		}
+
+		function sizeyunsuan(a,b,c){
+			if(c==0){
+				return a+b;
+			}
+			if(c==1){
+				return a-b;
+			}
+			if(c==2){
+				return a*b;
+			}
+			if(c==3){
+				return a/b;
+			}
+		}
+
+		function showf(fuhao){
+			switch(fuhao){
+				case 0:
+					return " + ";
+					break;
+				case 1:
+					return " - ";
+					break;
+				case 2:
+					return " * ";
+					break;
+				case 3:
+					return " / ";
+					break;
+			}
+		}
+		
+	</script>
+</body>
+</html>
