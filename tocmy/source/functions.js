@@ -158,7 +158,7 @@ var isMobile = {
 };
 
 function changePosion() {
-	alert(1);
+	alert("推荐横屏观看");
 	var head = document.getElementsByTagName('head')[0];
 	var link = document.createElement('link');
 	link.href = './source/mobile.css';
